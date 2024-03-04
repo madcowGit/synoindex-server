@@ -16,19 +16,11 @@ Tested on Synology DS218+.
 
 ### Install
 1. Download python file to any directory. ```(ex. /volume1/homes/admin)```
-2. Run 'synoindex_server_native.py' by task scheduler when boot-up.
+2. Run 'synoindex_server_native.py' by task scheduler when boot-up with ipaddress and port command line argument
 ```Shell
-python3 /volume1/homes/admin/synoindex_server_native.py
+python3 /volume1/homes/admin/synoindex_server_native.py ipadress port
 ```
 
-### Configuration
-Enter the IP of the host running server including port.
-```Shell
-config = {
-    'bindAddr': 'enterIPhere',
-    'bindPort': 9998
-}
-```
 ## Usage
 
 ### Passing arguments to synoindex from webbrowser
@@ -42,3 +34,10 @@ Example: force indexer to reindex the folder /volume1/download
 #!/bin/bash
 curl -G -d "args=-R" -d "args=/volume1/download" http://192.168.0.1:9998/synoindex
 ```
+### Shut down server
+Example: force indexer to reindex the folder /volume1/download
+```Shell
+#!/bin/bash
+http://192.168.0.1:9998/shutdown
+```
+
