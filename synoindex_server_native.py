@@ -59,7 +59,7 @@ def indexing(arg):
 # class to allow nice starting/stopping of httpserver
 class MainServer:
     def __init__(self, server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler):        
-        server_address = (sys.argv[1],sys.argv[2])
+        server_address = (sys.argv[1],int(sys.argv[2]))
         self._server = server_class(server_address, handler_class)
         self._thread = threading.Thread(target=self.run)
         self._thread.deamon = True
