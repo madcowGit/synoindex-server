@@ -1,11 +1,14 @@
 # synoindex-server
-Simple synoindex server is a web service wrapper for Synology NAS native 'synoindex'.
+synoindex-server is a web service wrapper for Synology NAS native 'synoindex'.
 
 ## Introduction
 Since Synology DSM 6.0 comes Docker support. Users run many media services in the docker. But we can't notify Synology NAS to reindexing new files in the docker's container.
-We can run synoindex inside the docker's container and request simple-synoindex-server to calling native synoindex to reindexing your new files using 'simple-synoindex-server' (https://github.com/racklin/simple-synoindex-server) for x86 or x64 cpu. However, it only works on x86 or x64, but thankfully this was ported to python (https://github.com/jhyun15/synoindex-server) for cross platform usability.
+We can run synoindex inside the docker's container and request simple-synoindex-server to calling native synoindex to reindexing your new files. 
+This is a python implementation with a bit more control over http-server that runs in the background.
 
-This for expands the functionality of that python implementation with a bit more control over http-server that runs in the background.
+based on:
+* 'simple-synoindex-server' (https://github.com/racklin/simple-synoindex-server) for x86 or x64 cpu
+* Python port (https://github.com/jhyun15/synoindex-server).
 
 ## Setup
 
